@@ -14,10 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from task_manager import views
+from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
 
+from .views import HomeView,
+
+
+# https://docs.djangoproject.com/en/4.1/topics/i18n/translation/#the-set-language-redirect-view
 urlpatterns = [
-    path('', views.index),
     path('admin/', admin.site.urls),
-]
+] + i18n_patterns(
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('', HomeView.as_view(), name='home'),
+    prefix_default_language=False,

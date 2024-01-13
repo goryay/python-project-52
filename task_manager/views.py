@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.views.generic.base import TemplateViews
 
 
-def index(request):
-    return render(request, 'index.html', context={
-        'who': 'World',
-    })
+class HomeView(TemplateView):
+    template_name = 'home.html'
