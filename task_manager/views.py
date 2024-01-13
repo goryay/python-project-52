@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.views.generic.base import TemplateViews
+from django.views.generic.base import TemplateView
 
 
 class HomeView(TemplateView):
