@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Task management is the process of managing a task through its lifecycle. It involves planning, testing, tracking."
+authors = ["goryay <iam.goryn@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/goryay/python-project-52"
+packages = [{include = "task_manager"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
