@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load i18n django_bootstrap5 %}
+
+{% block content %}
+<!--======= Form Content =======-->
+<div class="card bg-light p-3">
+  <h1>
+    {% block title %}
+    {{ title }}
+    {% endblock %}
+  </h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button btn_name button_type='submit' button_class='btn btn-success' %}
+  </form>
+</div><!-- End Form Content -->
+{% endblock %}

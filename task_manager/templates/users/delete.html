@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load i18n django_bootstrap5 %}
+
+{% block content %}
+<!--======= User Delete Content =======-->
+<div class="card bg-light p-3">
+<h1>
+  {% block title %}
+  {{ title }}
+  {% endblock %}
+</h1>
+
+<p>{% trans 'Are you sure you want to delete' %} {{ user.get_full_name }}?</p>
+<form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <button type="submit" class="btn btn-danger">{% trans 'Yes, delete' %}</button>
+</form>
+</div><!-- End User Delete Content -->
+{% endblock %}
