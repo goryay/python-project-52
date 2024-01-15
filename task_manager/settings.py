@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'task_manager.tasks',
     'task_manager.labels',
     'django_bootstrap5',
+    'django_filtres',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +61,43 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'main_formatter': {
+            'format': '{asctime} - {levelname} - {module} - {message}',
+            'style': '{',
+        },
+        'json_formatter': {
+            '()': CustomJsonFormatter,
+        }
+    },
+
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'main_formatter',
+            'level': 'DEBUG',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'formatter': 'json_formatter',
+            'filename': 'logging.log',
+            'level': 'DEBUG',
+        },
+    },
+
+    'loggers': {
+        'main_log': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 ROOT_URLCONF = 'task_manager.urls'
 
@@ -114,7 +153,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
