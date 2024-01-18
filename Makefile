@@ -41,7 +41,7 @@ coverage:
 	coverage html
 
 check:
-        lint test
+	lint test
 
 dry:
 	@$(MANAGE) makemigrations --dry-run
@@ -53,11 +53,10 @@ migrate:
 	@$(MANAGE) migrate
 
 .PHONY:
-        static
+	static
 
 static:
 	@$(MANAGE) collectstatic
-
 
 shell:
 	@$(MANAGE) shell_plus --ipython
@@ -65,6 +64,5 @@ shell:
 notebook:
 	@$(MANAGE) shell_plus --notebook
 
-
 .PHONY:
-        dev lint test test-coverage check install build publish package-install
+	dev lint test test-coverage check install build publish package-install
