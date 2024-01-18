@@ -1,7 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
-
 from typing import Type
 
 from django.contrib.auth.mixins import LoginRequiredMixin

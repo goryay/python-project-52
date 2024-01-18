@@ -1,45 +1,21 @@
 {% extends 'base.html' %}
 
-{% load i18n %}
+{% load i18n django_bootstrap5 %}
 
 {% block content %}
-<!--======= Users List Content =======-->
+<!--======= Task Delete Content =======-->
 <div class="card bg-light p-3">
 <h1>
   {% block title %}
-  {% trans 'Users' %}
+  {{ title }}
   {% endblock %}
 </h1>
 
-<div class="table-responsive">
-<table class="table table-striped table-hover table-info">
-
-  <thead>
-    <tr class="table-primary">
-      <th >ID</th>
-      <th>{% trans 'Username' %}</th>
-      <th>{% trans 'Full name' %}</th>
-      <th>{% trans 'Date of creation' %}</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {% for user in users %}
-      <tr>
-        <td class="table-primary">{{ user.pk }}</td>
-        <td>{{ user.username }}</td>
-        <td>{{ user.first_name }} {{ user.last_name }}</td>
-        <td>{{ user.date_joined | date:'d-m-Y H:i' }}</td>
-        <td>
-          <a href="{% url 'users:update' user.pk %}">{% trans 'Change' %}</a>
-          <a href="{% url 'users:delete' user.pk %}">{% trans 'Delete' %}</a>
-        </td>
-      </tr>
-    {% endfor %}
-  </tbody>
-
-</table><!-- End Users List Content -->
-</div>
-</div>
+<p>{% trans 'Are you sure you want to delete' %} {{ task.name }}?</p>
+<form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <button type="submit" class="btn btn-danger">{% trans 'Yes, delete' %}</button>
+</form>
+</div><!-- End Task Delete Content -->
 {% endblock %}

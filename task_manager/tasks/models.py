@@ -1,7 +1,4 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
 from django.urls import reverse_lazy
 
 from task_manager.labels.models import Label

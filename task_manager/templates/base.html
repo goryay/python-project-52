@@ -10,4 +10,10 @@
   {% bootstrap_javascript %}
 </head>
 
+<body class="container">
+{% include 'components/navigation.html' %}
+{% bootstrap_messages %}
+{% block content %}{% endblock %}
+{% include 'components/footer.html' %}
+</body>
 </html>
