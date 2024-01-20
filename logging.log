@@ -1,0 +1,3 @@
+{"message": "You are logged out", "timestamp": "2024-01-18T15:25:08.108171Z", "level": "DEBUG", "module": "views", "funcName": "get_default_redirect_url"}
+{"message": "User successfully registered", "timestamp": "2024-01-18T15:25:42.325228Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
+{"message": "You are logged in", "timestamp": "2024-01-18T15:25:52.523094Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
