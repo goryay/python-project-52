@@ -2,3 +2,9 @@
 {"message": "User successfully registered", "timestamp": "2024-01-18T15:25:42.325228Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
 {"message": "You are logged in", "timestamp": "2024-01-18T15:25:52.523094Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
 {"message": "User successfully updated", "timestamp": "2024-01-20T21:58:02.633751Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
+{"message": "", "timestamp": "2024-02-03T21:35:20.178175Z", "level": "ERROR", "module": "mixins", "funcName": "form_invalid"}
+{"message": "User successfully registered", "timestamp": "2024-02-03T21:36:01.009004Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
+{"message": "You are logged in", "timestamp": "2024-02-03T21:36:11.052837Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
+{"message": "You are logged out", "timestamp": "2024-02-03T21:36:16.688471Z", "level": "DEBUG", "module": "views", "funcName": "get_default_redirect_url"}
+{"message": "You are logged in", "timestamp": "2024-02-03T21:39:53.774778Z", "level": "DEBUG", "module": "mixins", "funcName": "form_valid"}
+{"message": "You are logged out", "timestamp": "2024-02-03T21:40:29.545098Z", "level": "DEBUG", "module": "views", "funcName": "get_default_redirect_url"}
