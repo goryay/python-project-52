@@ -1,4 +1,4 @@
-MANAGE := poetry run ./manage.py
+MANAGE := poetry run manage.py
 
 
 dev:
