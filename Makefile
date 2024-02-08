@@ -52,9 +52,6 @@ mmigrate:
 migrate:
 	@$(MANAGE) migrate
 
-.PHONY:
-	static
-
 static:
 	@$(MANAGE) collectstatic
 
