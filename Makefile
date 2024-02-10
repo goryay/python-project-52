@@ -2,7 +2,7 @@ MANAGE := poetry run ./manage.py
 
 
 dev:
-	@$(MANAGE) runserver
+	@$(MANAGE) runserver 0.0.0.0:${PORT}
 
 install:
 	poetry install
