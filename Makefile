@@ -26,24 +26,6 @@ compile:
 lint:
 	poetry run flake8
 
-test:
-	@$(MANAGE) test task_manager/tests/
-
-test-e2e:
-	@$(MANAGE) test task_manager.tests_end2end.playwright_users_test
-
-test-coverage:
-	poetry run coverage run --source="task_manager" manage.py test task_manager
-	poetry run coverage xml
-
-coverage:
-	coverage run --source='.' ./manage.py test .
-	coverage report
-	coverage html
-
-check:
-	lint test
-
 dry:
 	@$(MANAGE) makemigrations --dry-run
 
