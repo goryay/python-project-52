@@ -1,4 +1,5 @@
 MANAGE := poetry run ./manage.py
+PORT ?= 8000
 
 
 dev:
