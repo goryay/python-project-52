@@ -5,6 +5,9 @@ PORT ?= 8000
 dev:
 	@$(MANAGE) runserver 0.0.0.0:${PORT}
 
+local:
+	@$(MANAGE) runserver
+
 install:
 	poetry install
 
